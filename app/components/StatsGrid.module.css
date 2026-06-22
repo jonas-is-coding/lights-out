@@ -1,0 +1,73 @@
+.section {
+  padding: 56px 0;
+  border-top: 1px solid var(--app-border);
+}
+
+.head {
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--app-text-muted);
+}
+
+.title {
+  margin-top: 8px;
+  font-size: clamp(26px, 3.5vw, 36px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--app-text);
+}
+
+.accent {
+  color: var(--app-accent);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.card {
+  background: var(--app-surface);
+  border: 1px solid var(--app-border);
+  border-radius: var(--app-radius);
+  box-shadow: var(--app-shadow-sm);
+  padding: 24px;
+}
+
+.value {
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--app-text);
+}
+
+.label {
+  margin-top: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--app-text);
+}
+
+.sub {
+  margin-top: 2px;
+  font-size: 13px;
+  color: var(--app-text-muted);
+}
+
+@media (max-width: 860px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

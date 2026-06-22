@@ -1,0 +1,200 @@
+.section {
+  padding: 56px 0;
+  border-top: 1px solid var(--app-border);
+}
+
+.head {
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--app-text-muted);
+}
+
+.title {
+  margin-top: 8px;
+  font-size: clamp(26px, 3.5vw, 36px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--app-text);
+}
+
+.accent {
+  color: var(--app-accent);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.card {
+  background: var(--app-surface);
+  border: 1px solid var(--app-border);
+  border-radius: var(--app-radius);
+  box-shadow: var(--app-shadow-sm);
+  padding: 28px;
+}
+
+.cardTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.country {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--app-text-muted);
+}
+
+.flag {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--app-text);
+  background: var(--app-surface-2);
+  border: 1px solid var(--app-border);
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+.driverName {
+  margin-top: 10px;
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.02;
+  color: var(--app-text);
+}
+
+.lastName {
+  color: var(--app-accent);
+}
+
+.teamRow {
+  margin-top: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--app-text-muted);
+}
+
+.teamDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.helmet {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  flex-shrink: 0;
+}
+
+.helmetImage {
+  object-fit: contain;
+}
+
+.oddsGrid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.oddsCell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: var(--app-surface-2);
+  border: 1px solid var(--app-border);
+  border-radius: var(--app-radius-sm);
+  padding: 14px;
+}
+
+.oddsLabel {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--app-text-muted);
+}
+
+.oddsValue {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--app-text);
+}
+
+.selector {
+  display: grid;
+  gap: 10px;
+}
+
+.selectorBtn {
+  display: grid;
+  grid-template-columns: 32px 1fr auto;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+  background: var(--app-surface);
+  border: 1px solid var(--app-border);
+  border-radius: var(--app-radius);
+  box-shadow: var(--app-shadow-sm);
+  padding: 14px 16px;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.selectorBtn:hover {
+  border-color: var(--app-border-strong);
+  background: var(--app-surface-2);
+}
+
+.selectorActive {
+  border-color: var(--app-accent-border);
+  background: var(--app-accent-soft);
+}
+
+.selectorNum {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--app-text-dim);
+}
+
+.selectorActive .selectorNum {
+  color: var(--app-accent);
+}
+
+.selectorName {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--app-text);
+}
+
+.selectorOdds {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--app-text-muted);
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .oddsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

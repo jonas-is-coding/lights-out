@@ -1,0 +1,178 @@
+
+UI/UX im Web
+One-Pager im Web
+
+Eigenschaften, Aufbau und Elemente eines One-Pagers
+Unterrichtsfach
+Softwaretechnologie und Datenmanagement (SUD)
+Lehrkraft
+Niklas Teich
+Inhalt
+
+    Was ist ein One-Pager?
+    Was zeichnet ihn aus?
+    Grundelemente des Screendesigns
+    Aufbau und Sektionen
+    Vergleich: Andere Website-Typen
+
+1
+Was ist ein One-Pager?
+Definition
+
+Ein One-Pager (auch: Onepager, Einseiter oder Single Page Website) ist eine Website, auf der alle Inhalte auf einer einzigen, scrollbaren Seite untergebracht sind. Es gibt keine Unterseiten – stattdessen sind die Inhalte in klar voneinander abgegrenzte Sektionen gegliedert.
+
+Statt wie bei einer klassischen Website auf Unterseiten zu navigieren, scrollt der Besucher nach unten – oder springt per Klick in der Navigation direkt zu einem bestimmten Abschnitt. Diese Art der Navigation nennt man Anker-Navigation (Anchor-Links).
+
+One-Pager eignen sich besonders gut für Themen mit einem klaren Fokus, bei denen alle wichtigen Informationen kompakt und in einer logischen Reihenfolge präsentiert werden können – zum Beispiel für Portfolios, Veranstaltungen, Produktvorstellungen oder kleine Unternehmen.
+Wichtig
+
+Ein One-Pager ist nicht dasselbe wie eine Homepage. Eine Homepage ist lediglich die Startseite einer Website und kann zu vielen weiteren Unterseiten führen. Beim One-Pager gibt es nur eine Seite.
+2
+Was zeichnet einen One-Pager aus?
+
+One-Pager haben einige typische Merkmale, die sie von anderen Website-Typen unterscheiden. Diese betreffen sowohl die Struktur als auch das Design und die Nutzerführung.
+Typische Vorteile
+
+    Klare, lineare Nutzerführung
+    Fokus auf ein zentrales Thema oder Ziel
+    Kein Verirren auf Unterseiten
+    Gut geeignet für mobiles Scrollen
+    Modernes, visuell starkes Design möglich
+    Einfachere Pflege und Aktualisierung
+    Storytelling-Effekt durch gezielte Reihenfolge
+
+Typische Grenzen
+
+    Nicht geeignet für sehr viele Inhalte
+    Kaum für komplexe Themen mit Unterthemen
+    Eingeschränkte SEO-Möglichkeiten (eine URL)
+    Lange Scroll-Strecken können ermüden
+    Nicht skalierbar bei wachsendem Angebot
+
+Gestalterisch sind One-Pager häufig bildstark und textarm: Kurze, prägnante Texte, große visuelle Elemente, klare Trennung der Abschnitte durch Farbe oder Gestaltung sowie Effekte wie Parallax-Scrolling gehören zum typischen Erscheinungsbild.
+Merksatz
+
+Ein One-Pager ist dann sinnvoll, wenn sich ein Thema klar, kompakt und in einer logischen Reihenfolge erzählen lässt. Ist das Thema zu komplex oder gibt es viele gleichwertige Unterthemen, ist eine klassische Website mit Unterseiten die bessere Wahl.
+3
+Grundelemente eines Screendesigns
+
+Jede Website – und damit auch jeder One-Pager – besteht aus verschiedenen Grundelementen. Diese lassen sich in sechs Kategorien einteilen. Ein gutes Screendesign zeichnet sich durch das funktionale und ästhetisch harmonische Zusammenspiel dieser Elemente aus.
+Orientierungs-Elemente
+
+Zeigen dem Nutzer, wo er sich auf der Seite befindet und wie die Seite aufgebaut ist.
+
+    Logo / Seitenname
+    Abschnittsüberschriften
+    Anzeige des aktuellen Bereichs (z. B. aktiver Menüpunkt)
+    „Zurück nach oben"-Button
+
+Navigations-Elemente
+
+Helfen dem Nutzer, sich durch die Seite zu bewegen und gezielt Bereiche anzusteuern.
+
+    Hauptnavigation (Menüleiste)
+    Anker-Links (springen zu Abschnitten)
+    Scroll-Indikatoren
+    Buttons wie „Mehr erfahren"
+
+Inhalts-Elemente
+
+Die eigentlichen Informationen der Seite – alles, was der Nutzer sehen, lesen oder hören soll.
+
+    Texte & Überschriften
+    Bilder & Grafiken
+    Videos & Animationen
+    Icons & Illustrationen
+
+Screen-Layout-Elemente
+
+Organisieren den Seitenaufbau und bringen Inhalte in ein harmonisches Gesamtbild.
+
+    Raster / Grid-System
+    Abstände & Weißraum
+    Farbbereiche / Streifen
+    Trennlinien zwischen Abschnitten
+
+Interaktions-Elemente
+
+Ermöglichen dem Nutzer, mit der Seite zu interagieren und eine Aktion auszuführen.
+
+    Buttons / Call-to-Action (CTA)
+    Kontaktformulare
+    Links
+    Eingabefelder
+
+Motivations-Elemente
+
+Wecken Interesse, erzeugen Vertrauen und motivieren den Nutzer, sich weiter mit dem Inhalt zu beschäftigen.
+
+    Kundenstimmen / Testimonials
+    Referenzen & Logos
+    Animationen & Effekte
+    Storytelling-Elemente
+
+Hinweis für die Praxis
+
+Beim Konzipieren eines One-Pagers sollte für jede Sektion überlegt werden, welche Elementkategorien dort enthalten sind. Ein Hero-Bereich enthält z. B. Orientierungs-, Inhalts- und Interaktionselemente gleichzeitig.
+
+Fahren Sie mit der Maus über die markierten Bereiche im Mockup, um die zugehörigen Elemente zu sehen. Auf dem Smartphone tippen Sie auf einen Bereich.
+meine-seite.de LOGO Über uns Leistungen Kontakt Impressum · Datenschutz · © 2025 Social · Social · Social Bild " ★★★★★ Name … E-Mail … Nachricht … Absenden → Jetzt starten → Orientierungs-Elemente Logo, Seitenname, Abschnittstitel, Footer ... Inhalts-Elemente Überschriften, Texte, Bilder, Videos, Icons ... Navigations-Elemente Menülinks, Anker-Links, Breadcrumbs, Scroll-Button ... Screen-Layout-Elemente Raster, Abstände, Streifen, Farbbereiche, Weißraum ... Motivations-Elemente Testimonials, Bewertungen, Referenzen, Animationen ... Interaktions-Elemente Buttons, Formulare, Links, Call-to-Action, Eingaben ...
+4
+User Journey – Aufbau und Sektionen eines One-Pagers
+
+Ein One-Pager ist in klar voneinander getrennte Sektionen unterteilt. Die Reihenfolge dieser Sektionen ist entscheidend: Sie bestimmt die sogenannte User Journey – also den Weg, den ein Besucher durch die Seite nimmt. Da beim One-Pager alle Inhalte auf einer Seite sind, hat der Designer volle Kontrolle über die Reihenfolge, in der Informationen wahrgenommen werden.
+
+Die folgende Struktur zeigt eine typische Anordnung der Sektionen. Je nach Thema und Zielgruppe kann die Reihenfolge angepasst werden – wichtig ist immer, dass sie logisch und für den Nutzer nachvollziehbar ist.
+Navigation
+(Header)
+Fixierte Navigationsleiste
+Bleibt beim Scrollen sichtbar. Enthält Anker-Links zu den Abschnitten sowie das Logo. Orientierungselement für den Nutzer.
+1. Hero-Bereich
+(Above the Fold)
+Erster sichtbarer Bereich – ohne Scrollen
+„Above the Fold" bezeichnet den Teil der Seite, der beim Öffnen sofort sichtbar ist – also noch bevor der Nutzer scrollt. Dieser Bereich enthält die Hauptbotschaft (Headline), eine kurze Erklärung (Subline) und einen Call-to-Action-Button. Er entscheidet, ob der Nutzer bleibt oder geht. Meist mit großem Bild oder Hintergrundvideo.
+2. Einführung / Nutzenversprechen
+Worum geht es? Was hat der Besucher davon?
+Kurze, klare Erklärung des Angebots oder des Themas. Beantwortet die Frage: „Bin ich hier richtig?" Kein langer Fließtext – lieber knappe Aussagen mit Struktur.
+3. Leistungen / Inhalte / Angebot
+Was wird angeboten oder gezeigt?
+Kerninhalt der Seite. Übersichtliche Darstellung – oft mit Icons, kurzen Textblöcken oder Karten. Mehrere Unterpunkte möglich, aber kompakt gehalten. Diese Sektion darf sich mit verschiedenen Inhaltsbereichen wiederholen, z. B. erst „Leistungen", dann „Galerie", dann „Ablauf" – jeder Bereich als eigene Sektion.
+4. Über uns / Vertrauen
+Wer steckt dahinter? Warum sollte man vertrauen?
+Kurze Vorstellung der Person, des Unternehmens oder der Marke. Kundenstimmen (Testimonials), Referenzen oder Logos können hier das Vertrauen stärken (Motivationselement).
+5. Call-to-Action / Kontakt
+Was soll der Besucher jetzt tun?
+Das Ziel der Seite: Kontaktaufnahme, Buchung, Anmeldung, Download o. Ä. Auffälliger Button oder Formular. Klarer Handlungsaufruf. Kann auch mehrfach auf der Seite erscheinen.
+Footer
+Rechtliche Pflichtangaben und Links
+Impressum, Datenschutz, ggf. Social-Media-Links, Kontaktdaten. Viele Nutzer scrollen direkt zum Footer, wenn sie diese Informationen suchen.
+Reihenfolge ist Strategie
+
+Die Reihenfolge der Sektionen ist kein Zufall. Begonnen wird immer mit der wichtigsten Botschaft (Hero), dann wird Verständnis aufgebaut, der Inhalt gezeigt, Vertrauen erzeugt – und erst dann folgt der Handlungsaufruf. Diese Logik folgt dem Prinzip: Aufmerksamkeit → Interesse → Überzeugung → Aktion.
+
+Die Abschnitte werden gestalterisch durch Farben, Hintergründe, Abstände oder Trennlinien voneinander abgegrenzt. Das macht deutlich, dass ein neues Thema beginnt, und gibt der Seite Struktur und Rhythmus.
+5
+Vergleich: Andere Website-Typen
+
+Der One-Pager ist nur einer von mehreren Website-Typen. Je nach Ziel, Zielgruppe und Umfang der Inhalte kann ein anderer Typ besser geeignet sein. Die folgende Tabelle gibt einen Überblick.
+Typ 	Struktur 	Typischer Einsatz 	Abgrenzung zum One-Pager
+One-Pager 	Eine einzelne, scrollbare Seite in Sektionen 	Portfolio, Event, Produkt, kleine Unternehmen 	— (Referenztyp)
+Klassische Website 	Hierarchisch: Startseite + Unterseiten 	Unternehmen, Organisationen, Portale 	Viele Unterseiten; Themen sind klar getrennt; besser für große Informationsmengen
+Microsite 	Wenige Unterseiten, flache Hierarchie 	Einzelne Produkte, Kampagnen, Sonderauftritte 	Hat Unterseiten, aber wenige; gestalterisch vom Hauptauftritt abgesetzt; mehr Inhalte als One-Pager
+Landing Page 	Einzelne Seite mit klarem Marketingziel 	Werbekampagnen, Newsletter-Anmeldung, Downloads 	Auch einseitig, aber stark werblich; Ziel ist eine konkrete Aktion (Conversion); oft ohne vollständige Navigation
+Blog 	Chronologisch; viele Beiträge in Kategorien 	Themenportale, News, Magazine 	Regelmäßig neue Inhalte; netzförmige Struktur statt linear; kein Fokus auf eine Botschaft
+Entscheidungshilfe
+
+Wenn sich das Thema in einer klaren Reihenfolge erzählen lässt und nicht zu viele gleichwertige Unterthemen hat → One-Pager. Wenn ein breites Thema mit vielen Kategorien vorliegt → klassische Website. Wenn eine Kampagne mit einem einzigen Ziel beworben wird → Landing Page.
+✓
+Das Wichtigste auf einen Blick
+
+    Ein One-Pager zeigt alle Inhalte auf einer einzigen, scrollbaren Seite – ohne Unterseiten.
+    Die Inhalte sind in klar abgegrenzte Sektionen gegliedert, die per Anker-Navigation erreichbar sind.
+    Jede Sektion enthält verschiedene Grundelemente des Screendesigns: Orientierungs-, Navigations-, Inhalts-, Layout-, Interaktions- und Motivationselemente.
+    Die Reihenfolge der Sektionen ist strategisch geplant: von der ersten Botschaft (Hero) bis zum Handlungsaufruf (CTA).
+    Der Hero-Bereich (Above the Fold) ist der erste sichtbare Bereich und damit der wichtigste Abschnitt.
+    One-Pager sind visuell stark, textarm und besonders für mobile Nutzung geeignet.
+    Im Vergleich: Microsite = wenige Unterseiten; Landing Page = ein konkretes Marketingziel; klassische Website = viele Unterseiten hierarchisch.
+
+One-Pager im Web · SUD · Carl-Severing-Berufskolleg · Lehrkraft: Niklas Teich Quellen: lehrerfortbildung-bw.de · kulturbanause.de · wix.com/blog

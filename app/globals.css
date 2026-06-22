@@ -1,40 +1,73 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --bg: #050505;
+  --bg-elev: #0f0f0f;
+  --bg-card: #141414;
+  --fg: #ffffff;
+  --muted: #a0a0a0;
+  --dim: #6a6a6a;
+  --red: #e10600;
+  --red-glow: #ff1a1a;
+  --red-deep: #8b0000;
+  --white: #ffffff;
+  --black: #000000;
+  --grid: rgba(255, 255, 255, 0.05);
+  --border: rgba(255, 255, 255, 0.08);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html {
-  height: 100%;
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* ── Light "app" theme (auth, dashboard, product pages) ───────── */
+  --app-bg: #fbfbfc;
+  --app-bg-subtle: #f5f5f7;
+  --app-surface: #ffffff;
+  --app-surface-2: #f7f7f8;
+  --app-text: #18181b;
+  --app-text-muted: #62656e;
+  --app-text-dim: #9396a0;
+  --app-border: rgba(17, 18, 22, 0.09);
+  --app-border-strong: rgba(17, 18, 22, 0.15);
+  --app-accent: #e10600;
+  --app-accent-hover: #c20500;
+  --app-accent-soft: rgba(225, 6, 0, 0.08);
+  --app-accent-border: rgba(225, 6, 0, 0.32);
+  --app-pos: #15803d;
+  --app-pos-soft: rgba(21, 128, 61, 0.1);
+  --app-radius-lg: 16px;
+  --app-radius: 12px;
+  --app-radius-sm: 8px;
+  --app-shadow-xs: 0 1px 2px rgba(16, 24, 40, 0.05);
+  --app-shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.04), 0 1px 3px rgba(16, 24, 40, 0.07);
+  --app-shadow-md: 0 4px 12px rgba(16, 24, 40, 0.06), 0 2px 6px rgba(16, 24, 40, 0.04);
+  --app-shadow-lg: 0 16px 40px rgba(16, 24, 40, 0.1), 0 4px 12px rgba(16, 24, 40, 0.05);
+  --app-ring: 0 0 0 3px rgba(225, 6, 0, 0.16);
 }
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--fg);
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+html,
+body {
+  background: var(--app-bg);
+  color: var(--app-text);
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font-display), system-ui, sans-serif;
+  line-height: 1.5;
 }
 
 a {
@@ -42,8 +75,169 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+button {
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+::selection {
+  background: var(--red);
+  color: var(--white);
+}
+
+img,
+svg,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--red-deep);
+  border-radius: 0;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--red);
+}
+
+/* Utilities */
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
   }
+}
+
+.grid-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(to right, var(--grid) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid) 1px, transparent 1px);
+  background-size: 80px 80px;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+}
+
+.scan-lines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 3px,
+    rgba(255, 255, 255, 0.015) 3px,
+    rgba(255, 255, 255, 0.015) 4px
+  );
+}
+
+.noise {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 100;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
+
+.display {
+  font-weight: 900;
+  letter-spacing: -0.045em;
+  line-height: 0.84;
+  text-transform: uppercase;
+}
+
+.eyebrow {
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--red);
+  box-shadow: 0 0 14px var(--red), 0 0 28px rgba(225, 6, 0, 0.5);
+  animation: pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.55; transform: scale(0.85); }
+}
+
+.text-red { color: var(--red); }
+.text-muted { color: var(--muted); }
+
+/* Stripe pattern */
+.stripes {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    var(--red) 0px,
+    var(--red) 14px,
+    var(--black) 14px,
+    var(--black) 28px
+  );
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Light "app" surface — auth, dashboard, product pages.
+   Paints an opaque light theme over the fixed dark body and
+   establishes calm, Clerk-style defaults for everything inside.
+   ───────────────────────────────────────────────────────────── */
+.lightApp {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  background: var(--app-bg);
+  color: var(--app-text);
+  font-family: var(--font-display), system-ui, sans-serif;
+}
+
+.lightApp ::selection {
+  background: rgba(225, 6, 0, 0.16);
+  color: var(--app-text);
+}
+
+/* Calm down the marketing eyebrow when used on a light surface */
+.lightApp .eyebrow {
+  color: var(--app-text-dim);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+}
+
+.lightApp .eyebrow::before {
+  box-shadow: 0 0 8px rgba(225, 6, 0, 0.55);
+}
+
+/* Shared "app-bar" used by the route-aware Navbar on light surfaces */
+.appbarSpacer {
+  height: 68px;
 }

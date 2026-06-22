@@ -1,0 +1,440 @@
+/* Markets page layout */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+/* ── Market panel (left) ─────────────────────────────────── */
+.marketPanel {
+  min-width: 0;
+}
+
+.marketTabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.marketTab {
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--app-text-muted);
+  background: var(--app-surface);
+  border: 1px solid var(--app-border);
+  border-radius: var(--app-radius-sm);
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+  white-space: nowrap;
+}
+
+.marketTab:hover {
+  color: var(--app-text);
+  border-color: var(--app-border-strong);
+  background: var(--app-surface-2);
+}
+
+.marketTabActive {
+  color: var(--app-accent);
+  background: var(--app-accent-soft);
+  border-color: var(--app-accent-border);
+}
+
+.eventLabel {
+  font-size: 13px;
+  color: var(--app-text-dim);
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+/* Selections grid */
+.selectionsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.selectionBtn {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 18px;
+  background: var(--app-surface);
+  border: 1px solid var(--app-border);
+  border-radius: var(--app-radius);
+  box-shadow: var(--app-shadow-sm);
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.selectionBtn:hover {
+  border-color: var(--app-border-strong);
+  box-shadow: var(--app-shadow-md);
+}
+
+.selectionBtnActive {
+  border-color: var(--app-accent-border);
+  background: var(--app-accent-soft);
+  box-shadow: var(--app-shadow-sm);
+}
+
+.selectionImgWrap {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 88px;
+  margin: -4px 0 6px;
+}
+
+.selectionImg {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+  filter: drop-shadow(0 4px 6px rgba(16, 24, 40, 0.12));
+}
+
+.selectionLabel {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--app-text);
+}
+
+.selectionSub {
+  font-size: 12px;
+  color: var(--app-text-dim);
+}
+
+.selectionOdds {
+  margin-top: 8px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--app-accent);
+}
+
+/* ── Slip panel (right) ──────────────────────────────────── */
+.slipPanel {
+  position: sticky;
+  top: 24px;
+}
+
+.slipCard {
+  background: var(--app-surface);
+  border: 1px solid var(--app-border);
+  border-radius: var(--app-radius);
+  box-shadow: var(--app-shadow-md);
+  padding: 24px;
+}
+
+.slipTitle {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--app-text);
+  margin-bottom: 20px;
+}
+
+/* Selected pick */
+.slipPick {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--app-accent-soft);
+  border: 1px solid var(--app-accent-border);
+  border-radius: var(--app-radius-sm);
+  margin-bottom: 20px;
+}
+
+.slipPickImg {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  object-position: bottom;
+  flex-shrink: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+.slipPickInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  flex: 1;
+}
+
+.slipPickLabel {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--app-text);
+}
+
+.slipPickMarket {
+  font-size: 12px;
+  color: var(--app-text-muted);
+}
+
+.slipPickOdds {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--app-accent);
+  flex-shrink: 0;
+}
+
+.slipEmpty {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  padding: 20px 0;
+  margin-bottom: 20px;
+  border: 1px dashed var(--app-border);
+  border-radius: var(--app-radius-sm);
+}
+
+.slipEmpty p {
+  max-width: 220px;
+  font-size: 13px;
+  color: var(--app-text-dim);
+  text-align: center;
+}
+
+.slipEmptyImage {
+  width: min(78%, 190px);
+  height: auto;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Quick amounts */
+.quickAmounts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.quickAmtBtn {
+  padding: 7px 4px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--app-text-muted);
+  background: var(--app-surface-2);
+  border: 1px solid var(--app-border);
+  border-radius: var(--app-radius-sm);
+  cursor: pointer;
+  text-align: center;
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.quickAmtBtn:hover {
+  color: var(--app-text);
+  border-color: var(--app-border-strong);
+  background: var(--app-surface);
+}
+
+.quickAmtBtnActive {
+  color: var(--app-accent);
+  background: var(--app-accent-soft);
+  border-color: var(--app-accent-border);
+}
+
+/* Stake input */
+.stakeLabel {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.stakeLabelText {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--app-text-muted);
+  margin-bottom: 6px;
+}
+
+.stakeInputWrap {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--app-border);
+  border-radius: var(--app-radius-sm);
+  background: var(--app-surface);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.stakeInputWrap:focus-within {
+  border-color: var(--app-accent-border);
+  box-shadow: var(--app-ring);
+}
+
+.stakePrefix {
+  padding: 0 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--app-text-muted);
+  border-right: 1px solid var(--app-border);
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.stakeInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 0 12px;
+  height: 40px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--app-text);
+  font-family: inherit;
+  min-width: 0;
+}
+
+.stakeInput::placeholder {
+  color: var(--app-text-dim);
+  font-weight: 400;
+}
+
+/* Return / balance rows */
+.returnRow,
+.balanceRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--app-border);
+  margin-bottom: 4px;
+}
+
+.returnLabel {
+  font-size: 13px;
+  color: var(--app-text-muted);
+}
+
+.returnValue {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--app-pos);
+}
+
+.balanceValue {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--app-text);
+}
+
+/* Free bet checkbox */
+.freeBetLabel {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 14px 0;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--app-text-muted);
+  cursor: pointer;
+}
+
+.freeBetCheckbox {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--app-accent);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* Messages */
+.successMsg {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  align-items: center;
+  gap: 10px;
+  color: var(--app-pos);
+  background: var(--app-pos-soft);
+  border: 1px solid rgba(21, 128, 61, 0.25);
+  border-radius: var(--app-radius-sm);
+  padding: 8px 12px;
+  margin: 14px 0;
+}
+
+.successMsg p {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.successImage {
+  width: 42px;
+  height: auto;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  user-select: none;
+}
+
+.errorMsg {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--app-accent);
+  background: var(--app-accent-soft);
+  border: 1px solid var(--app-accent-border);
+  border-radius: var(--app-radius-sm);
+  padding: 10px 14px;
+  margin: 14px 0;
+}
+
+/* Submit button */
+.submitBtn {
+  display: block;
+  width: 100%;
+  margin-top: 16px;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  background: var(--app-accent);
+  border: none;
+  border-radius: var(--app-radius-sm);
+  cursor: pointer;
+  transition: background 0.15s ease, opacity 0.15s ease;
+}
+
+.submitBtn:hover:not(:disabled) {
+  background: var(--app-accent-hover);
+}
+
+.submitBtn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* ── Responsive ────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .slipPanel {
+    position: static;
+  }
+}
+
+@media (max-width: 600px) {
+  .selectionsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .marketTabs {
+    gap: 6px;
+  }
+}

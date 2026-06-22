@@ -1,0 +1,143 @@
+.section {
+  padding: 56px 0;
+  border-top: 1px solid var(--app-border);
+}
+
+.head {
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--app-text-muted);
+}
+
+.title {
+  margin-top: 8px;
+  font-size: clamp(26px, 3.5vw, 36px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--app-text);
+}
+
+.accent {
+  color: var(--app-accent);
+}
+
+.table {
+  background: var(--app-surface);
+  border: 1px solid var(--app-border);
+  border-radius: var(--app-radius);
+  box-shadow: var(--app-shadow-sm);
+  overflow: hidden;
+}
+
+.headerRow,
+.row {
+  display: grid;
+  grid-template-columns: 48px 1.6fr 1.2fr 1.4fr 88px;
+  align-items: center;
+  gap: 16px;
+  padding: 13px 22px;
+}
+
+.headerRow {
+  background: var(--app-surface-2);
+  border-bottom: 1px solid var(--app-border);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--app-text-muted);
+}
+
+.headerNum {
+  text-align: right;
+}
+
+.row {
+  border-bottom: 1px solid var(--app-border);
+  font-size: 14px;
+  transition: background 0.15s ease;
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.row:hover {
+  background: var(--app-surface-2);
+}
+
+.pos {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--app-text-dim);
+}
+
+.team {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  color: var(--app-text);
+}
+
+.teamBar {
+  width: 4px;
+  height: 22px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.drivers {
+  color: var(--app-text-muted);
+}
+
+.pointsCol {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.pointsBar {
+  flex: 1;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--app-surface-2);
+  overflow: hidden;
+  max-width: 120px;
+}
+
+.pointsFill {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+}
+
+.pointsNum {
+  min-width: 36px;
+  text-align: right;
+  font-weight: 600;
+  color: var(--app-text);
+}
+
+.odds {
+  text-align: right;
+  font-weight: 600;
+  color: var(--app-accent);
+}
+
+@media (max-width: 760px) {
+  .headerRow,
+  .row {
+    grid-template-columns: 36px 1.4fr 64px;
+  }
+
+  .colDrivers,
+  .drivers,
+  .pointsCol {
+    display: none;
+  }
+}

@@ -1,0 +1,481 @@
+.page {
+  min-height: 100vh;
+  background:
+    radial-gradient(900px 500px at 80% -5%, rgba(225, 6, 0, 0.05), transparent 60%),
+    var(--app-bg);
+}
+
+/* ── Header: Logo oben rechts + „Docs“ ─────────────────────────── */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: 64px;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(14px) saturate(150%);
+  -webkit-backdrop-filter: blur(14px) saturate(150%);
+  border-bottom: 1px solid var(--app-border);
+}
+
+.headerInner {
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.back {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--app-text-muted);
+  transition: color 0.15s ease;
+}
+.back:hover {
+  color: var(--app-text);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.brandBars {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.brandBar {
+  display: inline-block;
+  width: 3px;
+  height: 16px;
+  background: var(--app-accent);
+  border-radius: 1px;
+}
+
+.brandText {
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  color: var(--app-text);
+}
+.brandRed {
+  color: var(--app-accent);
+}
+
+.docsBadge {
+  margin-left: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--app-accent);
+  background: var(--app-accent-soft);
+  border: 1px solid var(--app-accent-border);
+  border-radius: 999px;
+  padding: 3px 11px;
+}
+
+/* ── Layout: TOC + Inhalt ──────────────────────────────────────── */
+.layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 32px 80px;
+  display: grid;
+  grid-template-columns: 232px 1fr;
+  gap: 56px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 32px 20px 64px;
+  }
+}
+
+/* ── Inhaltsverzeichnis ───────────────────────────────────────── */
+.toc {
+  position: sticky;
+  top: 96px;
+}
+
+@media (max-width: 900px) {
+  .toc {
+    position: static;
+    top: auto;
+    border: 1px solid var(--app-border);
+    border-radius: var(--app-radius);
+    padding: 16px;
+    background: var(--app-surface);
+  }
+}
+
+.tocTitle {
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--app-text-dim);
+  margin-bottom: 14px;
+}
+
+.tocNav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-left: 1px solid var(--app-border);
+}
+
+.tocLink {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--app-text-muted);
+  padding: 6px 0 6px 16px;
+  margin-left: -1px;
+  border-left: 2px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.tocLink:hover {
+  color: var(--app-accent);
+  border-left-color: var(--app-accent);
+}
+
+/* ── Inhalt ───────────────────────────────────────────────────── */
+.content {
+  min-width: 0;
+  max-width: 780px;
+}
+
+.section {
+  scroll-margin-top: 88px;
+  padding-bottom: 56px;
+  border-bottom: 1px solid var(--app-border);
+  margin-bottom: 56px;
+}
+.section:last-of-type {
+  border-bottom: none;
+}
+
+.h1 {
+  font-size: clamp(30px, 5vw, 42px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin: 16px 0 18px;
+  color: var(--app-text);
+}
+
+.h2 {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  color: var(--app-text);
+}
+
+.h3 {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 10px;
+  color: var(--app-text);
+}
+
+.lead {
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--app-text-muted);
+  max-width: 70ch;
+}
+
+.p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--app-text-muted);
+  max-width: 70ch;
+  margin-bottom: 18px;
+}
+
+.lead strong,
+.p strong {
+  color: var(--app-text);
+  font-weight: 700;
+}
+
+.callout {
+  margin-top: 22px;
+  padding: 16px 18px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--app-text-muted);
+  background: var(--app-accent-soft);
+  border: 1px solid var(--app-accent-border);
+  border-left-width: 3px;
+  border-radius: var(--app-radius-sm);
+}
+
+.code {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.86em;
+  color: var(--app-accent);
+  background: var(--app-accent-soft);
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+/* ── Karten-Raster ────────────────────────────────────────────── */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 16px;
+  background: var(--app-surface);
+  border: 1px solid var(--app-border);
+  border-radius: var(--app-radius);
+  box-shadow: var(--app-shadow-xs);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+.card:hover {
+  border-color: var(--app-accent-border);
+  box-shadow: var(--app-shadow-md);
+  transform: translateY(-2px);
+}
+
+.cardTitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--app-text);
+}
+
+.cardDesc {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--app-text-muted);
+}
+
+.codeMini {
+  align-self: flex-start;
+  margin-top: 4px;
+  font-family: var(--font-mono), monospace;
+  font-size: 11.5px;
+  color: var(--app-text-dim);
+  background: var(--app-surface-2);
+  border: 1px solid var(--app-border);
+  padding: 2px 7px;
+  border-radius: 6px;
+}
+
+/* ── Ordnerbaum ───────────────────────────────────────────────── */
+.tree {
+  font-family: var(--font-mono), monospace;
+  font-size: 12.5px;
+  line-height: 1.75;
+  color: var(--app-text-muted);
+  background: var(--app-surface);
+  border: 1px solid var(--app-border);
+  border-radius: var(--app-radius);
+  padding: 20px 22px;
+  overflow-x: auto;
+  white-space: pre;
+  box-shadow: var(--app-shadow-xs);
+}
+
+/* ── Tabelle ──────────────────────────────────────────────────── */
+.tableWrap {
+  overflow-x: auto;
+  border: 1px solid var(--app-border);
+  border-radius: var(--app-radius);
+  box-shadow: var(--app-shadow-xs);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  background: var(--app-surface);
+}
+
+.table th {
+  text-align: left;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--app-text-dim);
+  padding: 12px 16px;
+  background: var(--app-surface-2);
+  border-bottom: 1px solid var(--app-border);
+}
+
+.table td {
+  padding: 13px 16px;
+  color: var(--app-text-muted);
+  border-bottom: 1px solid var(--app-border);
+  vertical-align: top;
+}
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--app-text-muted);
+  background: var(--app-surface-2);
+  border: 1px solid var(--app-border);
+  border-radius: 999px;
+  padding: 2px 10px;
+  white-space: nowrap;
+}
+
+/* ── Feature-Karten ───────────────────────────────────────────── */
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+}
+
+.featureCard {
+  padding: 22px;
+  background: var(--app-surface);
+  border: 1px solid var(--app-border);
+  border-radius: var(--app-radius-lg);
+  box-shadow: var(--app-shadow-sm);
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.list li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--app-text-muted);
+}
+
+.list li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--app-accent);
+}
+
+/* ── Schritte (Wett-Engine) ───────────────────────────────────── */
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 4px 0 22px;
+}
+
+.step {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 16px 18px;
+  background: var(--app-surface);
+  border: 1px solid var(--app-border);
+  border-radius: var(--app-radius);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--app-text-muted);
+  box-shadow: var(--app-shadow-xs);
+}
+
+.step strong {
+  color: var(--app-text);
+}
+
+.stepNum {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--app-accent);
+  border-radius: 50%;
+  box-shadow: var(--app-shadow-xs);
+}
+
+/* ── Farb-Swatches ────────────────────────────────────────────── */
+.swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.swatch {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 2px;
+  height: 92px;
+  padding: 12px;
+  border-radius: var(--app-radius);
+  border: 1px solid var(--app-border);
+  color: #fff;
+}
+
+.swatch span {
+  font-size: 13px;
+  font-weight: 700;
+}
+.swatch code {
+  font-family: var(--font-mono), monospace;
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+.swatchLight {
+  color: var(--app-text);
+}
+.swatchLight code {
+  color: var(--app-text-muted);
+}
+
+/* ── Footer ───────────────────────────────────────────────────── */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 8px;
+  font-size: 13px;
+  color: var(--app-text-dim);
+}
+
+.footerLink {
+  font-weight: 600;
+  color: var(--app-accent);
+  transition: color 0.15s ease;
+}
+.footerLink:hover {
+  color: var(--app-accent-hover);
+}
