@@ -38,6 +38,7 @@ Journey deutlich komplexer als das Unterrichtsbeispiel: Sie ist nicht nur linear
 **verzweigt und zyklisch**.
 
 > 📄 **Vollständiges Konzept:** [`docs/USER-JOURNEY.md`](docs/USER-JOURNEY.md)
+> 📕 **Als PDF (lineare Reise Landing → erste Wette):** [`docs/user-journey.pdf`](docs/user-journey.pdf)
 
 ### Die fünf Phasen (AIDA + Web-App-Erweiterung)
 

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>User Journey · LIGHTS OUT</title>
+<style>
+  @page { size: A4; margin: 18mm 16mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    color: #1a1a1a; line-height: 1.55; font-size: 11pt; margin: 0;
+  }
+  h1 { font-size: 26pt; margin: 0 0 4px; letter-spacing: -0.5px; }
+  h2 {
+    font-size: 15pt; margin: 0 0 10px; padding-bottom: 6px;
+    border-bottom: 2px solid #e03131; display: inline-block;
+  }
+  h3 { font-size: 12pt; margin: 0 0 4px; }
+  p { margin: 0 0 8px; }
+  .muted { color: #666; }
+  .accent { color: #e03131; }
+  .green { color: #2f9e44; }
+  a { color: #e03131; text-decoration: none; }
+
+  .cover {
+    padding: 40px 0 24px; border-bottom: 3px solid #1a1a1a; margin-bottom: 26px;
+  }
+  .lights { font-size: 13pt; letter-spacing: 3px; color: #e03131; font-weight: 700; }
+  .sub { font-size: 12pt; color: #444; margin-top: 6px; }
+  .meta { font-size: 9.5pt; color: #888; margin-top: 14px; }
+
+  .toc { background: #f7f7f8; border-radius: 8px; padding: 16px 22px; margin-bottom: 26px; }
+  .toc ol { margin: 6px 0 0; padding-left: 20px; }
+  .toc li { margin: 2px 0; }
+
+  .step { page-break-inside: avoid; margin-bottom: 22px; }
+  .step-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 8px; }
+  .num {
+    background: #e03131; color: #fff; font-weight: 700; font-size: 11pt;
+    width: 30px; height: 30px; border-radius: 50%;
+    display: inline-flex; align-items: center; justify-content: center; flex: 0 0 30px;
+  }
+  .route {
+    font-family: "SF Mono", Consolas, monospace; font-size: 9pt;
+    background: #1a1a1a; color: #fff; padding: 2px 8px; border-radius: 4px; margin-left: 6px;
+  }
+  .card {
+    border: 1.5px solid #ddd; border-left: 4px solid #e03131;
+    border-radius: 8px; padding: 12px 16px; background: #fff;
+  }
+  .tags { margin-top: 6px; font-size: 8.5pt; color: #888; }
+  .tag {
+    display: inline-block; background: #f1f3f5; border-radius: 10px;
+    padding: 1px 9px; margin: 2px 4px 0 0; color: #555;
+  }
+  .arrow { text-align: center; color: #e03131; font-size: 16pt; margin: -8px 0 6px; }
+
+  .phase {
+    background: #1a1a1a; color: #fff; border-radius: 6px;
+    padding: 6px 14px; font-size: 9pt; letter-spacing: 1.5px;
+    text-transform: uppercase; margin: 26px 0 14px; display: block;
+  }
+  .quote {
+    font-style: italic; color: #444; border-left: 3px solid #e03131;
+    padding-left: 14px; margin: 4px 0 18px;
+  }
+  .keytake { background: #fff5f5; border-radius: 8px; padding: 14px 20px; margin-top: 8px; }
+  .keytake li { margin: 4px 0; }
+  footer {
+    margin-top: 30px; padding-top: 10px; border-top: 1px solid #ddd;
+    font-size: 8.5pt; color: #999; text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="lights">● ● ● ● ● <span class="green">●</span></div>
+  <h1>User Journey · LIGHTS OUT 🏁</h1>
+  <div class="sub">Vom ersten Eindruck bis zur ersten Wette – der Weg des Nutzers
+  durch die Formel-1-Wett-Web-App.</div>
+  <div class="meta">
+    Softwaretechnologie und Datenmanagement (SUD) · Carl-Severing-Berufskolleg ·
+    Lehrkraft: Niklas Teich
+  </div>
+</div>
+
+<p class="quote">„Fünf rote Lichter. Ein grünes. Deine Wette ist aktiv." –
+Wie beim Start eines Formel-1-Rennens führen wir den Nutzer Schritt für Schritt bis zur
+ersten platzierten Wette.</p>
+
+<div class="toc">
+  <h3>Der Weg im Überblick</h3>
+  <p class="muted" style="margin:2px 0 0">Wir folgen dem Nutzer linear von oben nach unten durch die
+  Landing Page, über die Registrierung bis ins Dashboard zur ersten Wette.</p>
+  <ol>
+    <li><b>Landing Page</b> – Hero → Kennzahlen → Fahrer → WM-Tabelle → FAQ → Call-to-Action</li>
+    <li><b>Konto erstellen</b> – Registrierung &amp; Login</li>
+    <li><b>Dashboard</b> – Übersicht &amp; Cockpit</li>
+    <li><b>Erste Wette</b> – Markt wählen, Einsatz, Wette abschließen</li>
+  </ol>
+</div>
+
+<!-- PHASE 1 -->
+<span class="phase">Phase 1 · Landing Page — Aufmerksamkeit → Interesse → Überzeugung</span>
+<p class="muted">Der Besucher landet auf der Startseite (<code>/</code>) und scrollt von oben nach
+unten. Jede Sektion hat eine klare Aufgabe und führt ihn ein Stück weiter Richtung Wette.</p>
+
+<div class="step">
+  <div class="step-head"><span class="num">1</span><h3>Hero-Bereich <span class="route">/ · Above the Fold</span></h3></div>
+  <div class="card">
+    <p><b>Erster Eindruck ohne Scrollen.</b> Große Headline <span class="accent">„Fünf rote
+    Lichter. Ein grünes. Deine Wette ist aktiv."</span>, kurze Subline und ein klarer
+    Call-to-Action-Button. Vertrauenssignale: <i>146 Live-Märkte · abgerechnet in unter 60s</i>.
+    Hier entscheidet sich in Sekunden, ob der Nutzer bleibt.</p>
+    <div class="tags"><span class="tag">Orientierung</span><span class="tag">Inhalt</span><span class="tag">Interaktion (CTA)</span></div>
+  </div>
+</div>
+<div class="arrow">↓ scrollt weiter</div>
+
+<div class="step">
+  <div class="step-head"><span class="num">2</span><h3>Live-Kennzahlen <span class="route">StatsGrid</span></h3></div>
+  <div class="card">
+    <p><b>Nutzenversprechen mit echten Zahlen.</b> „Wettbüro · Echte Zahlen" – Live-Kennzahlen
+    und Countdown zum nächsten Rennen beantworten die Frage <i>„Bin ich hier richtig?"</i> und
+    erzeugen Dynamik &amp; Dringlichkeit.</p>
+    <div class="tags"><span class="tag">Inhalt</span><span class="tag">Motivation</span></div>
+  </div>
+</div>
+<div class="arrow">↓</div>
+
+<div class="step">
+  <div class="step-head"><span class="num">3</span><h3>Fahrer &amp; Favoriten <span class="route">Drivers</span></h3></div>
+  <div class="card">
+    <p><b>Kerninhalt: die Quoten.</b> „Ausgewählte Märkte · Rennsieger-Quoten" zeigt die
+    Favoriten mit Karten und konkreten Quoten. Der Nutzer sieht zum ersten Mal das eigentliche
+    Produkt – und bekommt Lust, selbst zu tippen.</p>
+    <div class="tags"><span class="tag">Inhalt</span><span class="tag">Interaktion</span><span class="tag">Motivation</span></div>
+  </div>
+</div>
+<div class="arrow">↓</div>
+
+<div class="step">
+  <div class="step-head"><span class="num">4</span><h3>WM-Tabelle &amp; Titelquoten <span class="route">Standings</span></h3></div>
+  <div class="card">
+    <p><b>Aktualität schafft Vertrauen.</b> „2026 Konstrukteure · Outright Champion · Live-Quoten" –
+    eine aktuelle Tabelle mit Punkten und Titelquoten beweist Kompetenz und Seriosität. Der Nutzer
+    merkt: Hier sind die Daten echt und tagesaktuell.</p>
+    <div class="tags"><span class="tag">Inhalt</span><span class="tag">Motivation (Vertrauen)</span></div>
+  </div>
+</div>
+<div class="arrow">↓</div>
+
+<div class="step">
+  <div class="step-head"><span class="num">5</span><h3>Häufige Fragen <span class="route">FAQ</span></h3></div>
+  <div class="card">
+    <p><b>Letzte Einwände entkräften.</b> „Support · Regeln · Verantwortungsvolles Spielen" –
+    die häufigsten Fragen zu Auszahlung, Sicherheit und Regeln werden direkt beantwortet. So
+    fallen die letzten Hürden vor der Anmeldung.</p>
+    <div class="tags"><span class="tag">Inhalt</span><span class="tag">Interaktion</span></div>
+  </div>
+</div>
+<div class="arrow">↓</div>
+
+<div class="step">
+  <div class="step-head"><span class="num">6</span><h3>Call-to-Action <span class="route">CTA · „Bereit für den Start?"</span></h3></div>
+  <div class="card" style="border-left-color:#2f9e44;background:#f6fff8">
+    <p><b>Der Wendepunkt der Journey.</b> Nach Aufmerksamkeit, Interesse und Überzeugung folgt der
+    klare Handlungsaufruf: <span class="green"><b>„Konto erstellen"</b></span>. Hier verlässt der
+    Nutzer die Landing Page und wird vom Besucher zum Kunden.</p>
+    <div class="tags"><span class="tag">Interaktion (Conversion)</span></div>
+  </div>
+</div>
+
+<!-- PHASE 2 -->
+<span class="phase">Phase 2 · Konto erstellen — Aktion (Conversion)</span>
+
+<div class="step">
+  <div class="step-head"><span class="num">7</span><h3>Registrierung <span class="route">/register</span></h3></div>
+  <div class="card">
+    <p><b>Der Nutzer legt sein Konto an.</b> Ein kurzes Formular fragt Racer-Name, E-Mail und
+    Passwort (mit Bestätigung) ab. Als Anreiz lockt ein Willkommensbonus von
+    <span class="green"><b>+€10 Gratiswetten</b></span>. Nach erfolgreicher Validierung
+    (Server Action) wird das Konto erstellt und der Nutzer direkt eingeloggt.</p>
+    <div class="tags"><span class="tag">Interaktion</span><span class="tag">Motivation (Bonus)</span></div>
+  </div>
+</div>
+<div class="arrow">↓ alternativ: bereits registriert</div>
+
+<div class="step">
+  <div class="step-head"><span class="num">8</span><h3>Login <span class="route">/login</span></h3></div>
+  <div class="card">
+    <p><b>Wiederkehrende Nutzer melden sich an.</b> E-Mail + Passwort über next-auth. Bei
+    falschen Daten erscheint eine klare Fehlermeldung. Geschützte Bereiche (<code>/dashboard/*</code>)
+    leiten nicht angemeldete Nutzer automatisch hierher um. Nach Erfolg geht es ins Dashboard.</p>
+    <div class="tags"><span class="tag">Interaktion</span><span class="tag">Orientierung</span></div>
+  </div>
+</div>
+
+<!-- PHASE 3 -->
+<span class="phase">Phase 3 · Dashboard — Ankommen in der Web App</span>
+
+<div class="step">
+  <div class="step-head"><span class="num">9</span><h3>Übersicht / Cockpit <span class="route">/dashboard</span></h3></div>
+  <div class="card">
+    <p><b>Willkommen zurück, Racer.</b> Das Dashboard ist das Cockpit des Nutzers: aktuelles
+    <b>Guthaben</b> (inkl. Gratiswette), Countdown zum <b>nächsten Rennen</b>, Kennzahlen wie aktive
+    Wetten, Netto-Gewinn/Verlust und Trefferquote, dazu die <b>Treuestufe</b> (Pole Position →
+    Champion). Über die Sidebar erreicht der Nutzer alle App-Bereiche. Ein deutlicher Button
+    <span class="accent"><b>„+ Wette platzieren"</b></span> weist den Weg zur ersten Wette.</p>
+    <div class="tags"><span class="tag">Orientierung</span><span class="tag">Inhalt</span><span class="tag">Navigation</span><span class="tag">Motivation</span></div>
+  </div>
+</div>
+
+<!-- PHASE 4 -->
+<span class="phase">Phase 4 · Die erste Wette — Das Ziel der Journey</span>
+
+<div class="step">
+  <div class="step-head"><span class="num">10</span><h3>Markt &amp; Einsatz wählen <span class="route">/dashboard/markets</span></h3></div>
+  <div class="card">
+    <p><b>„Wette platzieren".</b> Der Nutzer wählt einen Markt (z. B. Rennsieger, Podium,
+    schnellste Runde), tippt eine Auswahl an (etwa <i>Verstappen – Sieger, Quote 1.85</i>) und
+    legt seinen Einsatz fest – per Schnellauswahl (€25/€50/€100) oder frei. Der <b>Wettschein</b>
+    zeigt live den möglichen Gewinn. Optional: die <span class="green">Gratiswette</span> einlösen.</p>
+    <div class="tags"><span class="tag">Inhalt</span><span class="tag">Interaktion</span><span class="tag">Navigation</span></div>
+  </div>
+</div>
+<div class="arrow">↓ „Wette setzen"</div>
+
+<div class="step">
+  <div class="step-head"><span class="num">11</span><h3>Wette abschließen &amp; verfolgen <span class="route">/dashboard/bets</span></h3></div>
+  <div class="card" style="border-left-color:#2f9e44;background:#f6fff8">
+    <p><b>Geschafft – die erste Wette ist platziert!</b> Eine Bestätigung erscheint
+    (<span class="green">„Wette platziert!"</span>), das Guthaben wird sofort aktualisiert. Unter
+    „Meine Wetten" sieht der Nutzer seine offene Wette mit möglichem Gewinn und kann sie verfolgen.
+    Vor Rennende besteht die Option zum <b>Cash Out</b> (vorzeitig auszahlen). Nach dem Rennen wird
+    die Wette automatisch abgerechnet – Gewinn oder Verlust fließt ins Guthaben.</p>
+    <div class="tags"><span class="tag">Inhalt</span><span class="tag">Interaktion</span><span class="tag">Motivation</span></div>
+  </div>
+</div>
+
+<div class="quote" style="margin-top:18px">Damit ist die Journey nicht zu Ende, sondern beginnt von vorn:
+Das aktualisierte Guthaben, der Countdown zum nächsten Rennen und die Treuepunkte führen den
+Nutzer zurück in den <b>Wett-Loop</b> – die nächste Wette wartet.</div>
+
+<!-- Zusammenfassung -->
+<span class="phase">Das Wichtigste auf einen Blick</span>
+<div class="keytake">
+  <ul>
+    <li>Die Landing Page führt den Nutzer <b>linear von oben nach unten</b>: Hero → Kennzahlen →
+    Fahrer → WM-Tabelle → FAQ → Call-to-Action (Prinzip <b>Aufmerksamkeit → Interesse → Überzeugung
+    → Aktion</b>).</li>
+    <li>Der <b>Call-to-Action</b> ist der Wendepunkt: Aus dem Besucher wird durch
+    <b>Registrierung</b> ein Kunde (Anreiz: +€10 Gratiswetten).</li>
+    <li>Nach dem <b>Login</b> kommt der Nutzer im <b>Dashboard</b> an – dem Cockpit mit Guthaben,
+    nächstem Rennen und Kennzahlen.</li>
+    <li>Das Ziel der Journey ist die <b>erste platzierte Wette</b>: Markt wählen → Einsatz → Wette
+    setzen → verfolgen / Cash Out / Abrechnung.</li>
+    <li>Anschließend beginnt der zyklische <b>Wett-Loop</b> – die Journey wiederholt sich und bindet
+    den Nutzer langfristig.</li>
+  </ul>
+</div>
+
+<footer>
+  User Journey · LIGHTS OUT · SUD · Carl-Severing-Berufskolleg · Lehrkraft: Niklas Teich
+</footer>
+
+</body>
+</html>
