@@ -1,7 +1,6 @@
 import NextAuth from "next-auth";
 import NeonAdapter from "@auth/neon-adapter";
 import Credentials from "next-auth/providers/credentials";
-import Google from "next-auth/providers/google";
 import bcrypt from "bcryptjs";
 import { pool } from "@/db";
 
@@ -40,15 +39,6 @@ export const { handlers, signIn, signOut, auth } = NextAuth(() => {
         }
       },
     }),
-    ...(process.env.GOOGLE_CLIENT_ID && process.env.GOOGLE_CLIENT_SECRET
-      ? [
-          Google({
-            clientId: process.env.GOOGLE_CLIENT_ID,
-            clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-            allowDangerousEmailAccountLinking: true,
-          }),
-        ]
-      : []),
   ];
 
   return {
