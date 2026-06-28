@@ -86,6 +86,9 @@ Die Wireframes sind in **Excalidraw** erstellt und decken die wichtigsten Screen
 > Zum Ansehen/Bearbeiten unter [excalidraw.com](https://excalidraw.com) öffnen
 > (*Menü → Open → Datei auswählen*).
 
+> 🧠 **Mindmap (Projektstruktur):** [`wireframes/lights-out-mindmap.excalidraw`](wireframes/lights-out-mindmap.excalidraw)
+> – Thema, Zielgruppe, Struktur, Ziel und Inhalt des Projekts auf einen Blick.
+
 Enthaltene Screens:
 
 | Screen | Route | Inhalt |
